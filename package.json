@@ -1,0 +1,40 @@
+{
+  "private": true,
+  "name": "my-app",
+  "version": "1.0.0",
+  "description": "npm init template for bootstrapping an empty Colyseus project",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "parcel src/client/index.html -p 8000",
+    "start-server": "node src/server/index.js",
+    "loadtest": "colyseus-loadtest loadtest/example.js --room my_room --numClients 2",
+    "test": "mocha test/**_test.js --exit --timeout 15000"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/colyseus/create-colyseus/issues"
+  },
+  "homepage": "https://github.com/colyseus/create-colyseus#readme",
+  "devDependencies": {
+    "@colyseus/loadtest": "^0.14.0",
+    "@colyseus/testing": "^0.14.21",
+    "mocha": "^9.0.2",
+    "parcel-plugin-static-files-copy": "^2.6.0"
+  },
+  "dependencies": {
+    "@colyseus/arena": "^0.14.7",
+    "@colyseus/monitor": "^0.14.0",
+    "ball": "^0.1.0",
+    "colyseus": "^0.14.9",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "matter": "^0.2.0",
+    "phaser": "^3.55.2",
+    "regenerator-runtime": "^0.13.9"
+  },
+  "staticFiles": {
+    "staticPath": "public",
+    "watcherGlob": "**"
+  }
+}
